@@ -10,10 +10,6 @@ module.exports = merge(common, {
         port: 3001,
         compress: true,
         open: true,
-        proxy: {
-            '/': 'http://localhost:3000',
-            changeOrigin: true
-        },
         contentBase: path.resolve(__dirname, '../dist/assets/media')
     },
     module: {

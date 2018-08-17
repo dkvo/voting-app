@@ -1,9 +1,34 @@
 import React from 'react';
-import ReactDom from 'react-dom';
+import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
-import {createStore, applyMiddleWare} from 'redux';
-import './styles/app.scss';
+import ReduxThunk from 'redux-thunk';
+import ReduxPromise from 'redux-promise';
+import {createStore, applyMiddleware} from 'redux';
+import {BrowserRouter,Route, Switch} from 'react-router-dom';
 
-ReactDom.render(
-    <div> hello world</div>
-, document.querySelector('.container'));
+import reducers from './reducers';
+import './styles/app.scss';
+import Home from './components/home';
+import NavBar from './components/navbar';
+import Register from './containers/register'
+import Poll from './components/poll';
+import DashBoard from './containers/dashboard';
+
+const createStoreWithMiddleWare = applyMiddleware(ReduxThunk, ReduxPromise)(createStore);
+ReactDOM.render(
+    <Provider store ={createStoreWithMiddleWare(reducers)}> 
+        <div>
+            <NavBar />
+            <BrowserRouter>
+                <div>
+                    <Switch>
+                        <Route exact path='/' component={Home} />
+                        <Route path='/register' component={Register}/>
+                        <Route path='/dashboard'component={DashBoard}/>
+                        <Route path='/poll' component={Poll}/>
+                    </Switch>
+                </div>
+            </BrowserRouter>
+        </div>
+    </Provider>
+, document.querySelector('.root'));

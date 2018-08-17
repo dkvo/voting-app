@@ -7,7 +7,6 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
     mode: 'production',
-    devtool: 'source-map',
     optimization: {
         minimizer: [
             new OptimizeCssAssetsPlugin({})
@@ -26,9 +25,6 @@ module.exports = merge(common, {
                 use: [
                     {
                         loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            publicPath: path.resolve(__dirname, '../dist/assets/css')
-                        }
                     },
                     'css-loader', 
                     'postcss-loader', 

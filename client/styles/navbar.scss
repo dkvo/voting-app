@@ -1,0 +1,29 @@
+.navbar-custom{
+    background-color:  $color-superNova;
+}
+.container {
+    width: 100%;
+    height: 100%;
+}
+.icon-bar {
+    background-color: $color-curiousBlue;
+}
+.navbar-brand {
+    color: #337ab7;
+    font-size: 2rem;
+}
+
+.navbar-nav>li>a {
+    font-size: 2rem;
+}
+.collapse.in {
+    border-top: 0.1rem solid $color-curiousBlue;
+}
+.navbar-toggle {
+    border: 0.1rem solid $color-curiousBlue;
+}
+.nav-item {
+    color: $color-black;
+}
+
+

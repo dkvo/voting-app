@@ -53,7 +53,7 @@ pollRouter.delete('/:id', authenticate, (req, res) => {
         if(!poll) {
             return res.status(404).send();
         }
-        res.status(200).send({poll});
+        res.status(200).send(poll);
     }).catch(e => res.status(400).send(e));
 });
 
@@ -75,7 +75,7 @@ pollRouter.patch('/:id', authenticate, (req, res) => {
         if(!poll) {
             return res.status(404).send();
         }
-        res.status(200).send({poll});
+        res.status(200).send(poll);
     }).catch(e => res.status(400).send(e));
 });
 

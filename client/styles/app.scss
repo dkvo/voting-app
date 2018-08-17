@@ -1,5 +1,17 @@
+@import './variables';
+@import './navbar';
+@import './login';
+@import './polls';
+
+
 body {
-    background-color: green;
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    background-color: cadetblue;
 }
 
-  
+.root {
+    width: 100%;
+}
+
