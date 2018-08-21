@@ -6,7 +6,7 @@ class Login extends Component {
     render() {
         bootstrapUtils.addStyle(Jumbotron, 'custom');
         return (
-            <Jumbotron bsStyle='custom' mx-auto>
+            <Jumbotron bsStyle='custom'>
                 <Form horizontal>
                     <FormGroup controlId="email-field">
                         <Col componentClass={ControlLabel} sm={2}>Email</Col>

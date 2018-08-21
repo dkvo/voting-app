@@ -10,6 +10,7 @@ module.exports = merge(common, {
         port: 3001,
         compress: true,
         open: true,
+        historyApiFallback: true,
         contentBase: path.resolve(__dirname, '../dist/assets/media')
     },
     module: {

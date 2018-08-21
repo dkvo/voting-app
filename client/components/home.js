@@ -5,7 +5,7 @@ import Polls from '../containers/polls';
 
 const Home = (props) => {
     return (
-        <div>
+        <div className='home'>
             <Login />
             <Polls />
         </div>

@@ -9,7 +9,7 @@ const NavBar = (props) => {
         <Navbar collapseOnSelect fixedTop bsStyle='custom'>
             <Navbar.Header>
                 <Navbar.Brand>
-                <a href="#brand">Voting App</a>
+                <Link to='/'>Voting App</Link>
                 </Navbar.Brand>
                 <Navbar.Toggle />
             </Navbar.Header>

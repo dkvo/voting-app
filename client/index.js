@@ -11,21 +11,21 @@ import './styles/app.scss';
 import Home from './components/home';
 import NavBar from './components/navbar';
 import Register from './containers/register'
-import Poll from './components/poll';
+import Poll from './containers/poll';
 import DashBoard from './containers/dashboard';
 
 const createStoreWithMiddleWare = applyMiddleware(ReduxThunk, ReduxPromise)(createStore);
 ReactDOM.render(
     <Provider store ={createStoreWithMiddleWare(reducers)}> 
         <div>
-            <NavBar />
             <BrowserRouter>
                 <div>
+                    <NavBar />
                     <Switch>
                         <Route exact path='/' component={Home} />
                         <Route path='/register' component={Register}/>
                         <Route path='/dashboard'component={DashBoard}/>
-                        <Route path='/poll' component={Poll}/>
+                        <Route path='/poll/:id' component={Poll}/>
                     </Switch>
                 </div>
             </BrowserRouter>

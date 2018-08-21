@@ -2,16 +2,19 @@
 @import './navbar';
 @import './login';
 @import './polls';
+@import './poll';
 
 
 body {
-    font-size: 62.5%;
     margin: 0;
     padding: 0;
-    background-color: cadetblue;
+    font-size: 62.5%;
+    background-color: $color-cadetBlue;
 }
 
 .root {
     width: 100%;
+    max-width: 100%;
+    padding: 0;
+    overflow: hidden;
 }
-

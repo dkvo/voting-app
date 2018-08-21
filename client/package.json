@@ -11,8 +11,10 @@
   "author": "Khoa Vo",
   "license": "ISC",
   "dependencies": {
+    "@types/universal-cookie": "^2.2.0",
     "axios": "^0.18.0",
     "chart.js": "^2.7.2",
+    "history": "^4.7.2",
     "hoek": "^5.0.3",
     "lodash": "^4.17.10",
     "react": "^16.4.2",

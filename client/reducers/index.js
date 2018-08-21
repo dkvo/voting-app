@@ -1,7 +1,8 @@
 import {combineReducers} from 'redux';
+import pollsReducer from './polls_reducer';
 
 const reducers = combineReducers({
-    state: (state = {}) => state
+    polls: pollsReducer
 });
 
 export default reducers;
